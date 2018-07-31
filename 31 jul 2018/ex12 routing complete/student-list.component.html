@@ -1,0 +1,8 @@
+<table>
+    <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td><a [routerLink]="['/studentUpdate',student.id]">Update</a></td>
+        <td><a [routerLink]="['/studentDelete',student.id]">Delete</a></td>
+    </tr>
+</table>
