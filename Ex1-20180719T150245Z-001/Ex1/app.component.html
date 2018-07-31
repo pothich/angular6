@@ -1,0 +1,18 @@
+<p>{{message}}</p>
+
+<input type="text" name="message" [value]="message"/>
+
+<div *ngFor="let name of names">
+    {{name}}
+</div>
+
+
+<div *ngFor="let product of products">
+    <img [src]="product.imageUrl" />
+
+    <a [href]="product.location" />
+
+    <p>{{prdouct.description}}</p>
+</div>
+
+<button (click)="m1();">Click</button>
