@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "s1"
+    },
+    {
+      "id": 2,
+      "name": "s2",
+      "email": "s2@gmail.com",
+      "address": "Srnagar"
+    },
+    {
+      "id": 3,
+      "name": "s3",
+      "email": "s3@gmail.com",
+      "address": "kukatpally"
+    },
+    {
+      "id": 4,
+      "name": "s4",
+      "email": "s4@gmail.com",
+      "address": "panjagutta"
+    },
+    {
+      "id": "5",
+      "name": "s5",
+      "email": "s5@gmail.com",
+      "address": "ameerpet"
+    }
+  ]
+}
