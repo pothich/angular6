@@ -1,0 +1,40 @@
+<form novalidate #studentForm="ngForm">
+    id<input type="text" name="id" #studentid="ngModel" required minlength="3" pattern="[a-zA-Z0-9]{4}" [(ngModel)]="s1.id" />
+   
+
+    <span *ngIf="studentid.touched&&studentid.invalid">
+
+        
+            <span *ngIf="studentid.errors&&studentid.errors.required">
+        
+                please provide value.
+        
+            </span>
+
+            
+            <span *ngIf="studentid.errors&&studentid.errors.minlength">
+        
+                please provide atleast 5 char.
+        
+            </span>
+
+            <span *ngIf="studentid.errors&&studentid.errors.pattern">
+                
+                        please provide ................
+                
+                    </span>
+
+    </span>
+
+    <button [disabled]="studentForm.invalid">Save</button>
+
+    <br/>----States information <br/>
+
+    touched status {{studentid.touched}} <br/>
+    untouched status {{studentid.untouched}} <br/>
+    pristine status {{studentid.pristine}} <br/>
+    dirty status {{studentid.dirty}} <br/>
+    valid status {{studentid.valid}} <br/>
+    invalid status {{studentid.invalid}} <br/>
+
+</form>
