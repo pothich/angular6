@@ -1,0 +1,21 @@
+<table>
+    <tr *ngFor="let student of students|async" (click)="passData(student);">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.pm|mycurrency:"r"}}</td>
+        
+        <td><a [routerLink]="['/studentUpdate',student.id]">Update</a></td>
+        <td><a [routerLink]="['/studentDelete',student.id]">Delete</a></td>
+    </tr>
+</table>
+<table>
+    <tr *ngFor="let student of finalStudents|async" (click)="passData(student);">
+        <td>{{student.id}}</td>
+        <td>{{student.name|reverse}}</td>
+        <td><a [routerLink]="['/studentUpdate',student.id]">Update</a></td>
+        <td><a [routerLink]="['/studentDelete',student.id]">Delete</a></td>
+    </tr>
+</table>
+{{currentDate|date:dateFormat}}
+<button (click)="setFormat();">Change</button>
+<student-detail *ngIf="currentStudent!=null" [s1]="currentStudent"></student-detail>
