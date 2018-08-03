@@ -1,0 +1,16 @@
+<table>
+    <tr *ngFor="let student of students|async|slice:start:end" (click)="passData(student);">
+        <td>{{student.id|number:'2.2-3'}}</td>
+        <td>{{student.id/100|percent:'2.2-3'}}</td>
+        <td>{{student.name|uppercase}}</td>
+        <td>{{student.name|lowercase}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.pm|currency:"EUR"}}</td>
+        <td>{{student}}</td>
+        <td><a [routerLink]="['/studentUpdate',student.id]">Update</a></td>
+        <td><a [routerLink]="['/studentDelete',student.id]">Delete</a></td>
+    </tr>
+</table>
+<button (click)="prev();">prev</button>
+<button (click)="next();">next</button>
+<student-detail *ngIf="currentStudent!=null" [s1]="currentStudent"></student-detail>
