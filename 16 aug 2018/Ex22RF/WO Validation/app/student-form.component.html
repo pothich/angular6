@@ -1,0 +1,7 @@
+<form [formGroup]="studentForm">
+    id<input type="text" name="id" formControlName="id"/>
+    name<input type="text" name="name" formControlName="name" />
+    email<input type="text" name="email"  formControlName="email"/>
+    address<input type="text" name="address"  formControlName="address"/>
+    <button (click)="save()">Save</button>
+</form>

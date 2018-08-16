@@ -1,0 +1,19 @@
+<form [formGroup]="studentForm">
+    id<input type="text" name="id" formControlName="id"/>
+    
+    <span *ngIf="studentForm.controls['id'].touched&&studentForm.controls['id'].invalid">
+        <span *ngIf="studentForm.controls['id'].errors&&studentForm.controls['id'].errors.required">
+            this value should be provided
+         </span>
+         <span *ngIf="studentForm.controls['id'].errors&&studentForm.controls['id'].errors.min">
+            please provide positive integers only
+         </span>
+    </span>
+    
+    
+    <br/>
+    name<input type="text" name="name" formControlName="name" /><br/>
+    email<input type="text" name="email"  formControlName="email"/><br/>
+    address<input type="text" name="address"  formControlName="address"/><br/>
+    <button (click)="save()">Save</button>
+</form>
