@@ -1,0 +1,24 @@
+<form novalidate #loginForm="ngForm">
+    <label>Email</label>
+    <input type="text" #uname="ngModel" required name="email" id="email" [(ngModel)]="user.email" />
+
+    <span style="color: red" *ngIf="uname.touched&&uname.invalid">
+        <span *ngIf="uname.errors&&uname.errors.required">
+
+            please enter Email
+
+        </span>
+    </span>
+
+    <br />
+    <label>Password</label>
+    <input type="password" #pwd="ngModel" name="password" id="password" [(ngModel)]="user.password" />
+    
+    <br />
+    <input type="submit" value="Login" (click)="login()" />
+</form>
+<a [routerLink]="['/auth/google']">Login with google</a>|
+
+<button (click)="googleLogin()">Login with google.......</button>
+
+<a href="/api/auth/google">Sign In with Google</a>

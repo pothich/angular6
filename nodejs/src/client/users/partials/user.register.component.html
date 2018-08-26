@@ -1,0 +1,23 @@
+<form novalidate #registerForm="ngForm">
+
+    <label>Firstname</label>
+    <input type="text" name="first" [(ngModel)]="user.first" /><br />
+
+    <label>Latname</label>
+    <input type="text" name="last" [(ngModel)]="user.last" /><br />
+
+
+    <label>EmailId</label>
+    <input type="text" name="email" [(ngModel)]="user.email" /><br />
+
+    <label>Username</label>
+    <input type="text" name="username" id="username" [(ngModel)]="user.username" /><br />
+
+    <label>Password</label>
+    <input type="password" name="password" [(ngModel)]="user.password" /><br />
+    
+    <input type="submit"  value="Register" (click)="register()" />
+    
+</form>
+            
+    
